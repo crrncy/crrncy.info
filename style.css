@@ -1,70 +1,53 @@
 a {
-	        color:#585858;
+	color: #585858;
 	font-family: 'JetBrains Mono';
-
 }
-
 body {
 	background-color: #0f0f0f;
 	text-align: center;
-	color:#585858;
+	color: #585858;
 	font-family: "JetBrains Mono";
 }
 }
-
 h1 {
-	color:#585858;
+	color: #585858;
 	font-family: 'JetBrains Mono;
 
 }
-
-
-
 .main {
 	margin: auto auto;
 }
-
 .middle {
 	margin: auto auto;
 	padding: 6% 0% 6% 0%;
 }
-
-
 .currency {
 	display: inline-block;
 	padding: 1% 0% 1% 0%;
 }
-
 .amount {
 	display: inline-block;
 	padding: 4% 0% 4% 0%;
 }
-
 .totals {
 	display: relative;
-color:#585858;
+	color: #585858;
 }
-
 .bitcoin {
 	position: relative;
 }
-
 .sats {
 	position: relative;
 }
-
 .symbol {
 	display: inline-block;
 	font-size: 12rem;
-        color:#1a1a1a;
-  height: 14rem;
-
+	color: #1a1a1a;
+	height: 14rem;
 }
-
 .totals {
 	font-size: 2.5rem;
 }
-
 #banner {
 	background-color: black;
 	color: white;
@@ -74,9 +57,8 @@ color:#585858;
 	left: 0;
 	right: 0;
 	z-index: 5;
-	background-color:#0d0d0d;
+	background-color: #0d0d0d;
 }
-
 #banner .banner-container {
 	display: flex !important;
 	width: calc(100vw - 50px);
@@ -85,7 +67,6 @@ color:#585858;
 	justify-content: space-between;
 	align-items: center;
 }
-
 #banner .heart {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23D72626' stroke='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
 	background-size: cover;
@@ -95,16 +76,12 @@ color:#585858;
 	height: 14px;
 	margin: 0 5px;
 }
-
-
 .Info {
-  	font-size: .8rem;
-  	margin-bottom: 10%;
-  	position: absolute;
+	font-size: .8rem;
+	margin-bottom: 10%;
+	position: absolute;
 	bottom: 0px;
 }
-
-
 #currency-amount {
 	background-color: #1a1a1a;
 	border: none;
@@ -116,59 +93,48 @@ color:#585858;
 	font-weight: 600;
 	font-size: 5rem;
 }
-
 #currency-select {
 	font-size: .95rem;
-  background: #1a1a1a;
-  border: none;
-     border-radius: 10px;
-     color: #717171;
-     width: 225px;
-     height: 25px;
-     padding-left: 10px
+	background: #1a1a1a;
+	border: none;
+	border-radius: 10px;
+	color: #717171;
+	width: 225px;
+	height: 25px;
+	padding-left: 10px
 }
 .currency_select {
-        font-size:1rem;
-        color:#585858;
+	font-size: 1rem;
+	color: #585858;
 }
-
-
 .made {
-        font-size:.7rem;
-        color:#585858;
+	font-size: .7rem;
+	color: #585858;
 }
-
 #bitcoin-amount {
-  color: #ff600078;
+	color: #ff600078;
 }
-
 #satoshi-amount {
-  color: #ef8e198a;
+	color: #ef8e198a;
 }
-
 .fak.fa-satoshisymbol-solidtilt {
-  color: #875314;
+	color: #875314;
 }
 .fa-brands.fa-btc {
-  color: #7f3407;
+	color: #7f3407;
 }
-
-
-input[type=text]{
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-     border-radius: 20px;
-     border: 1px solid #2d9fd9;
-     color: #a0d18c;
-     width: 250px;
-     height: 30px;
-     padding-left: 10px;
-    }
-    
+input[type=text] {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #2d9fd9;
+	color: #a0d18c;
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+}
 input[type=text]:focus {
-     outline: none;
-     border: 1px solid #a0d18c;
-     color: #2d9fd9;
+	outline: none;
+	border: 1px solid #a0d18c;
+	color: #2d9fd9;
 }
-
-
