@@ -26,7 +26,7 @@ h1 {
 
 .middle {
 	margin: auto auto;
-	padding: 8% 0% 0% 0%;
+	padding: 6% 0% 6% 0%;
 }
 
 
@@ -79,7 +79,7 @@ color:#585858;
 
 #banner .banner-container {
 	display: flex !important;
-	width: calc(100vw - 80px);
+	width: calc(100vw - 50px);
 	height: 55px;
 	margin: 0 auto;
 	justify-content: space-between;
