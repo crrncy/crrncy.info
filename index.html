@@ -29,17 +29,18 @@
         <option value="gbp">British Pound</option>
         <option value="cad">Canadian Dollar</option>
         <option value="cny">Chinese Yuan</option>
+	<option value="clp">Chilean Peso</option>
         <option value="czk">Czech Koruna</option>
         <option value="dkk">Danish Krone</option>
 	<option value="aed">Emirates Dirham</option>
-        <option value="eur">Euro</option>       
+        <option value="eur">Euro</option>
         <option value="hkd">Hong Kong Dollar</option>
         <option value="huf">Hungarian Forint</option>
         <option value="idr">Indonesian Rupiah</option>
         <option value="ils">Israeli Shekel</option>
         <option value="inr">Indian Rupee</option>
         <option value="jpy">Japanese Yen</option>
- 	<option value="kwd">Kuwaiti Dinar</option>        
+ 	<option value="kwd">Kuwaiti Dinar</option>
         <option value="myr">Malaysian Ringgit</option>
         <option value="mxn">Mexican Peso</option>
  	<option value="twd">New Taiwan Dollar</option>
@@ -47,16 +48,17 @@
         <option value="ngn">Nigerian Naira</option>
         <option value="nok">Norwegian Krone</option>
    	<option value="pkr">Pakistani Rupee</option>
-        <option value="php">Philippine Peso</option>        
+        <option value="php">Philippine Peso</option>
         <option value="pln">Polish Złoty</option>
         <option value="rub">Russian Ruble</option>
         <option value="sar">Saudi Riyal</option>
         <option value="sgd">Singapore Dollar</option>
         <option value="zar">South African Rand</option>
         <option value="krw">South Korean Won</option>
+	<option value="lkr">Sri Lankan Rupee</option>
         <option value="sek">Swedish Krona</option>
         <option value="chf">Swiss Franc</option>
-        <option value="thb">Thai Baht</option>       
+        <option value="thb">Thai Baht</option>
         <option value="try">Turkish Lira</option>
         <option value="uah">Ukrainian Hryvnia</option>
         <option value="vnd">Vietnamese đồng</option>
@@ -65,14 +67,14 @@
 <div class=middle>
 <div class=symbol><span id="symbol"></span></div></div>
     <div class=monies>
-    <div class=amount><input type="text" id="currency-amount" placeholder=">>  <<"> </div></div></div>
-    <div class=totals><div class=bitcoin><i class="fa-brands fa-btc"></i> <span id="bitcoin-amount"></span> BTC </div>
-    <div class=sats><i class="fak fa-satoshisymbol-solidtilt"></i> <span id="satoshi-amount"></span><span id="sats_symbol"> Sats </span></div></div>
+    <div class=amount><input type="text" id="currency-amount" placeholder=">>  <<"> </div></div>
+    <div class=totals><div class=bitcoin><i class="fa-brands fa-btc"></i> <span id="bitcoin-amount"></span><span id=btc> BTC</span></div>
+    <div class=sats><i class="fak fa-satoshisymbol-solidtilt"></i> <span id="satoshi-amount"></span><span id="sats"> Sats</span></div></div></div>
 <script>
  const symbolField = document.getElementById("symbol");
  symbolField.innerHTML = "$";
 </script>
-<script>  
+<script>
       document.getElementById('currency-amount').value = "";
       window.addEventListener("load", function() {
       	document.getElementById('currency-select').selectedIndex = 0;
@@ -172,15 +174,15 @@
       		symbolField.innerHTML = "R$";
       	} else if (selectField.value === "bmd") {
       		symbolField.innerHTML = "$";
-	} else if (selectField.value === "uah") {
+	      } else if (selectField.value === "uah") {
       		symbolField.innerHTML = "₴";
-	} else if (selectField.value === "pln") {
+	      } else if (selectField.value === "pln") {
       		symbolField.innerHTML = "zł";
-	} else if (selectField.value === "pkr") {
-      		symbolField.innerHTML = "Rs.";
+	      } else if (selectField.value === "pkr") {
+      		symbolField.innerHTML = "Rs";
       	} else if (selectField.value === "sar") {
       		symbolField.innerHTML = "ر.س";
-	} else if (selectField.value === "nzd") {
+	      } else if (selectField.value === "nzd") {
       		symbolField.innerHTML = "NZ$";
         } else if (selectField.value === "idr") {
       		symbolField.innerHTML = "Rp";
@@ -192,15 +194,19 @@
       		symbolField.innerHTML = "د.إ‎";
       	} else if (selectField.value === "ars") {
       		symbolField.innerHTML = "Arg$";
-	} else if (selectField.value === "bhd") {
+	      } else if (selectField.value === "bhd") {
       		symbolField.innerHTML = "BD";
-	} else if (selectField.value === "czk") {
+	      } else if (selectField.value === "czk") {
       		symbolField.innerHTML = "Kč";
-	} else if (selectField.value === "dkk") {
+	      } else if (selectField.value === "dkk") {
       		symbolField.innerHTML = "DKr";
       	} else if (selectField.value === "huf") {
       		symbolField.innerHTML = "Ft‎";
-	} else if (selectField.value === "kwd") {
+	      } else if (selectField.value === "lkr") {
+      		symbolField.innerHTML = "රු";
+	      } else if (selectField.value === "clp") {
+      		symbolField.innerHTML = "$";
+	      } else if (selectField.value === "kwd") {
       		symbolField.innerHTML = "د.ك";
       	}
       });
