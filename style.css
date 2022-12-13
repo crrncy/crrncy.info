@@ -18,7 +18,6 @@ h1 {
   display: grid;
 }
 .middle {
-	margin: auto auto;
 	padding: 5% 0% 2% 0%;
 }
 .currency {
@@ -50,8 +49,12 @@ h1 {
   font-size: 12rem;
   color: #1a1a1a;
   height: 14rem;
-  top: 4px;
+  padding: 4px 0px 0px 0px;
   position: relative;
+}
+#symbol {
+  height: 100%;
+  display: inline-block;
 }
 .totals {
 	font-size: 2.5rem;
