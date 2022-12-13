@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head itemscope itemtype="http://schema.org/WebSite">
+  <title>crrncy.info</title>
   <title itemprop="name">crrncy</title>
   <link type="text/css" rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
@@ -22,19 +23,20 @@
    <div id="banner">
     <div class="banner-container"><div class=currency_select>
       <select id="currency-select">
-	<option value="usd">US Dollar</option>
+	      <option value="usd">US Dollar</option>
         <option value="ars">Argentine Peso</option>
         <option value="aud">Australian Dollar</option>
-	<option value="bmd">Bermudian Dollar</option>
+        <option value="bdt">Bangladeshi Taka</option>
+	      <option value="bmd">Bermudian Dollar</option>
         <option value="bhd">Bharaini Dinar</option>
         <option value="brl">Brazil Real</option>
         <option value="gbp">British Pound</option>
         <option value="cad">Canadian Dollar</option>
         <option value="cny">Chinese Yuan</option>
-	<option value="clp">Chilean Peso</option>
+	      <option value="clp">Chilean Peso</option>
         <option value="czk">Czech Koruna</option>
         <option value="dkk">Danish Krone</option>
-	<option value="aed">Emirates Dirham</option>
+	      <option value="aed">Emirates Dirham</option>
         <option value="eur">Euro</option>
         <option value="hkd">Hong Kong Dollar</option>
         <option value="huf">Hungarian Forint</option>
@@ -42,14 +44,14 @@
         <option value="ils">Israeli Shekel</option>
         <option value="inr">Indian Rupee</option>
         <option value="jpy">Japanese Yen</option>
- 	<option value="kwd">Kuwaiti Dinar</option>
+ 	      <option value="kwd">Kuwaiti Dinar</option>
         <option value="myr">Malaysian Ringgit</option>
         <option value="mxn">Mexican Peso</option>
- 	<option value="twd">New Taiwan Dollar</option>
+ 	      <option value="twd">New Taiwan Dollar</option>
         <option value="nzd">New Zealand Dollar</option>
         <option value="ngn">Nigerian Naira</option>
         <option value="nok">Norwegian Krone</option>
-   	<option value="pkr">Pakistani Rupee</option>
+   	    <option value="pkr">Pakistani Rupee</option>
         <option value="php">Philippine Peso</option>
         <option value="pln">Polish Złoty</option>
         <option value="rub">Russian Ruble</option>
@@ -57,7 +59,7 @@
         <option value="sgd">Singapore Dollar</option>
         <option value="zar">South African Rand</option>
         <option value="krw">South Korean Won</option>
-	<option value="lkr">Sri Lankan Rupee</option>
+	      <option value="lkr">Sri Lankan Rupee</option>
         <option value="sek">Swedish Krona</option>
         <option value="chf">Swiss Franc</option>
         <option value="thb">Thai Baht</option>
@@ -208,6 +210,8 @@
       		symbolField.innerHTML = "රු";
 	      } else if (selectField.value === "clp") {
       		symbolField.innerHTML = "$";
+        } else if (selectField.value === "bdt") {
+          symbolField.innerHTML = "Tk";
 	      } else if (selectField.value === "kwd") {
       		symbolField.innerHTML = "د.ك";
       	}
