@@ -15,9 +15,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" itemprop="description" content="convert dollars to bitcoin and sats">
-  <meta name="keywords" content="Bitcoin, Lightning Network, Lightning, Lightning Wallet, Lightning Node, Wallet, Node, LN, Currency, Sats, Satoshi, BTC, USD Coin, Tether USD, Currency Converter, Crrncy, crrncy.info">
-  <script src="https://kit.fontawesome.com/090ca49637.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/131efe1402.js" crossorigin="anonymous"></script>
+  <meta name="keywords" content="Bitcoin, Lightning Network, Lightning, Lightning Wallet, Lightning Node, Wallet, Node, LN, Currency, Sats, Satoshi, BTC, USD Coin, Tether USD, Currency Converter, Crrncy, crrncy.info, bitcoin currency converter">
 </head>
 <body>
   <div class="main">
@@ -72,9 +70,9 @@
 <div class=middle>
 <div class=symbol><span id="symbol"></span></div></div>
     <div class=monies>
-    <div class=amount><input type="text" id="currency-amount" placeholder=">>  <<"> </div></div>
-    <div class=totals><div class=bitcoin><i class="fa-brands fa-btc"></i> <span id="bitcoin-amount"></span><span id=btc> BTC</span></div>
-    <div class=sats><i class="fak fa-satoshisymbol-solidtilt"></i> <span id="satoshi-amount"></span><span id="sats"> Sats</span></div></div></div>
+    <div class=amount><input type="text" id="currency-amount"></div></div>
+    <div class=totals><div class=bitcoin><img class="btc-svg" src="assets/Bitcoin.svg">&nbsp;<span id="bitcoin-amount"></span><span id=btc>&nbsp;btc</span></div>
+    <div class=sats><img class="bitko" src="assets/Sat_semi_bold.svg">&nbsp;<span id="satoshi-amount"></span><span id="sats">&nbsp;sats</span></div></div></div>
 <script>
  const symbolField = document.getElementById("symbol");
  symbolField.innerHTML = "$";
