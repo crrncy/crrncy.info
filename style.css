@@ -8,6 +8,9 @@ body {
 	color: #585858d6;
 	font-family: "JetBrains Mono";
 	font-size: 1rem;
+	margin: 0;
+  height: 100vh;
+	width: 100vw;
 }
 h1 {
 	color: #585858d6;
@@ -17,9 +20,11 @@ h1 {
 	margin: auto auto;
   align-items: center;
   display: grid;
+	width: 100vw;
 }
 .middle {
 	padding: 5% 0% 2% 0%;
+	width: 100vw;
 }
 .currency {
 	display: inline-block;
@@ -27,7 +32,7 @@ h1 {
 }
 .amount {
 	display: inline-block;
-	padding: 1% 0% 1% 0%;
+	padding: 1em 0em 1em 0em;
 }
 .totals {
 	display: relative;
@@ -50,10 +55,10 @@ h1 {
 .symbol {
 	display: inline-block;
   font-size: 12rem;
-  color: #1a1a1a;
-  height: 14rem;
-  padding: .25rem 0rem 0rem 0rem;
-  position: relative;
+	color: #1a1a1a;
+	height: 14rem;
+	padding: .25rem 0rem 0rem 0rem;
+	position: relative;
 }
 #symbol {
   height: 100%;
@@ -63,7 +68,7 @@ h1 {
 	font-size: 2.5rem;
 }
 #banner {
-	background-color: #0f0f0f;
+	background-color: #0d0d0d;
 	color: #585858d6;
 	height: 3.4rem;
 	position: fixed;
@@ -71,11 +76,11 @@ h1 {
 	left: 0;
 	right: 0;
 	z-index: 5;
-	background-color: #0d0d0d;
+	width:100vw;
 }
 #banner .banner-container {
 	display: flex !important;
-	width: calc(100vw - 2.1875rem);
+	width: calc(100vw - 2em);
 	height: 3.4rem;
 	margin: 0 auto;
 	justify-content: space-between;
@@ -120,6 +125,9 @@ h1 {
 	outline:none;
 	font-family: "JetBrains Mono";
 }
+.monies {
+  width: 100vw;
+}
 .currency_select {
 	font-size: 1rem;
 	color: #585858d6;
@@ -150,7 +158,6 @@ input[type=text], input[type=number] {
 	color: #0f0f0f;
 	width: 250px;
 	height: 1.875rem;
-	padding-left: 10px;
 	font-family: "JetBrains Mono";
 }
 input[type=text]:focus {

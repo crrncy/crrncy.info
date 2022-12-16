@@ -74,55 +74,48 @@
     <div class=totals><div class=bitcoin><img class="btc-svg" src="assets/Bitcoin.svg">&nbsp;<span id="bitcoin-amount"></span><span id=btc>&nbsp;btc</span></div>
     <div class=sats><img class="bitko" src="assets/Sat_semi_bold.svg">&nbsp;<span id="satoshi-amount"></span><span id="sats">&nbsp;sats</span></div></div></div>
 <script>
- const symbolField = document.getElementById("symbol");
- symbolField.innerHTML = "$";
+document.getElementById('currency-amount').value = "";
+document.getElementById('currency-select').selectedIndex = 0;
+const bitcoinAmount = 0;
+const satoshiAmount = 0;
+const symbolField = document.getElementById("symbol");
+symbolField.innerHTML = "$";
+const bitcoinField = document.getElementById("bitcoin-amount");
+bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
+const satoshiField = document.getElementById("satoshi-amount");
+satoshiField.innerHTML = satoshiAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 </script>
 <script>
-      document.getElementById('currency-amount').value = "";
-      window.addEventListener("load", function() {
-      	document.getElementById('currency-select').selectedIndex = 0;
-      	// Fetch the current exchange rate from CoinGecko
-      	const selectField = document.getElementById("currency-select");
-      	const currency = selectField.value;
-      	fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(function(response) {
-      		return response.json();
-      	}).then(function(data) {
-      		// Convert the currency amount to Bitcoin and satoshis for 0 on load
-      		const currencyAmount = 0;
-      		const exchangeRate = data.bitcoin[currency];
-      		const bitcoinAmount = currencyAmount / exchangeRate;
-      		const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
-      		// Update the Bitcoin and satoshi amounts on the page
-      		const bitcoinField = document.getElementById("bitcoin-amount");
-      		bitcoinField.innerHTML = bitcoinAmount.toFixed(8);
-      		const satoshiField = document.getElementById("satoshi-amount");
-      		satoshiField.innerHTML = satoshiAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      	});
-      });
-</script>
-<script>
-           // Set up an event listener to convert the amount in the selected currency
-      // to Bitcoin and satoshis when the user types in the input field
-      const inputField = document.getElementById("currency-amount");
-      inputField.addEventListener("input", function() {
-      	// Fetch the current exchange rate from CoinGecko
-      	const selectField = document.getElementById("currency-select");
-      	const currency = selectField.value;
-      	fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(function(response) {
-      		return response.json();
-      	}).then(function(data) {
-      		// Convert the currency amount to Bitcoin and sats
-      		const currencyAmount = Number(inputField.value);
-      		const exchangeRate = data.bitcoin[currency];
-      		const bitcoinAmount = currencyAmount / exchangeRate;
-      		const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
-      		// Update the Bitcoin and sats amounts on the page
-      		const bitcoinField = document.getElementById("bitcoin-amount");
-      		bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
-      		const satoshiField = document.getElementById("satoshi-amount");
-      		satoshiField.innerHTML = satoshiAmount.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      	});
-      });
+let cachedData = {};
+const inputField = document.getElementById("currency-amount");
+inputField.addEventListener("input", function() {
+	const selectField = document.getElementById("currency-select");
+	const currency = selectField.value;
+	if (cachedData[currency]) {
+		const currencyAmount = Number(inputField.value);
+		const exchangeRate = cachedData[currency];
+		const bitcoinAmount = currencyAmount / exchangeRate;
+		const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
+		const bitcoinField = document.getElementById("bitcoin-amount");
+		bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
+		const satoshiField = document.getElementById("satoshi-amount");
+		satoshiField.innerHTML = satoshiAmount.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	} else {
+		fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(function(response) {
+			return response.json();
+		}).then(function(data) {
+			const currencyAmount = Number(inputField.value);
+			const exchangeRate = data.bitcoin[currency];
+			cachedData[currency] = exchangeRate;
+			const bitcoinAmount = currencyAmount / exchangeRate;
+			const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
+			const bitcoinField = document.getElementById("bitcoin-amount");
+			bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
+			const satoshiField = document.getElementById("satoshi-amount");
+			satoshiField.innerHTML = satoshiAmount.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		});
+	}
+});
       // event listener to change the symbol of chosen currency
       const selectField = document.getElementById("currency-select");
       selectField.addEventListener("change", function() {
@@ -177,17 +170,17 @@
       		symbolField.innerHTML = "R$";
       	} else if (selectField.value === "bmd") {
       		symbolField.innerHTML = "$";
-	      } else if (selectField.value === "uah") {
+      	} else if (selectField.value === "uah") {
       		symbolField.innerHTML = "₴";
-	      } else if (selectField.value === "pln") {
+      	} else if (selectField.value === "pln") {
       		symbolField.innerHTML = "zł";
-	      } else if (selectField.value === "pkr") {
+      	} else if (selectField.value === "pkr") {
       		symbolField.innerHTML = "Rs";
       	} else if (selectField.value === "sar") {
       		symbolField.innerHTML = "ر.س";
-	      } else if (selectField.value === "nzd") {
+      	} else if (selectField.value === "nzd") {
       		symbolField.innerHTML = "NZ$";
-        } else if (selectField.value === "idr") {
+      	} else if (selectField.value === "idr") {
       		symbolField.innerHTML = "Rp";
       	} else if (selectField.value === "twd") {
       		symbolField.innerHTML = "圓";
@@ -197,48 +190,48 @@
       		symbolField.innerHTML = "Dhs‎";
       	} else if (selectField.value === "ars") {
       		symbolField.innerHTML = "$";
-	      } else if (selectField.value === "bhd") {
+      	} else if (selectField.value === "bhd") {
       		symbolField.innerHTML = "BD";
-	      } else if (selectField.value === "czk") {
+      	} else if (selectField.value === "czk") {
       		symbolField.innerHTML = "Kč";
-	      } else if (selectField.value === "dkk") {
+      	} else if (selectField.value === "dkk") {
       		symbolField.innerHTML = "DKr";
       	} else if (selectField.value === "huf") {
       		symbolField.innerHTML = "Ft‎";
-	      } else if (selectField.value === "lkr") {
+      	} else if (selectField.value === "lkr") {
       		symbolField.innerHTML = "රු";
-	      } else if (selectField.value === "clp") {
+      	} else if (selectField.value === "clp") {
       		symbolField.innerHTML = "$";
-        } else if (selectField.value === "bdt") {
-          symbolField.innerHTML = "Tk";
-	      } else if (selectField.value === "kwd") {
+      	} else if (selectField.value === "bdt") {
+      		symbolField.innerHTML = "Tk";
+      	} else if (selectField.value === "kwd") {
       		symbolField.innerHTML = "د.ك";
       	}
       });
       // event listener to automatically convert the amount in the input
-      // field to Bitcoin and satoshis when the user selects a new currency
-      selectField.addEventListener("change", function() {
-      	const inputField = document.getElementById("currency-amount");
-      	const inputValue = inputField.value;
-      	if (inputValue !== "") {
-      		// Fetch the current exchange rate from CoinGecko
-      		const currency = selectField.value;
-      		fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(function(response) {
-      			return response.json();
-      		}).then(function(data) {
-      			// Convert the currency amount to Bitcoin and sats
-      			const currencyAmount = Number(inputField.value);
-      			const exchangeRate = data.bitcoin[currency];
-      			const bitcoinAmount = currencyAmount / exchangeRate;
-      			const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
-      			// Update the Bitcoin and satsamounts on the page
-      			const bitcoinField = document.getElementById("bitcoin-amount");
-      			bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
-      			const satoshiField = document.getElementById("satoshi-amount");
-      			satoshiField.innerHTML = satoshiAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      		});
-      	}
-      });
+  // field to Bitcoin and satoshis when the user selects a new currency
+  selectField.addEventListener("change", function() {
+  	const inputField = document.getElementById("currency-amount");
+  	const inputValue = inputField.value;
+  	if (inputValue !== "") {
+  		// Fetch the current exchange rate from CoinGecko
+  		const currency = selectField.value;
+  		fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(function(response) {
+  			return response.json();
+  		}).then(function(data) {
+  			// Convert the currency amount to Bitcoin and sats
+  			const currencyAmount = Number(inputField.value);
+  			const exchangeRate = data.bitcoin[currency];
+  			const bitcoinAmount = currencyAmount / exchangeRate;
+  			const satoshiAmount = currencyAmount * 100000000 / exchangeRate;
+  			// Update the Bitcoin and satsamounts on the page
+  			const bitcoinField = document.getElementById("bitcoin-amount");
+  			bitcoinField.innerHTML = bitcoinAmount.toFixed(6);
+  			const satoshiField = document.getElementById("satoshi-amount");
+  			satoshiField.innerHTML = satoshiAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  		});
+  	}
+  });
   </script>
  </body>
 </html>
