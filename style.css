@@ -5,7 +5,7 @@ body{
 	margin:0;
 	height:100vh;
 	width:100vw;
-	font-family:"JetBrains Mono"
+	font-family:'JetBrains Mono', monospace
 }
 .banner{
 	background-color:#0d0d0d;
@@ -16,8 +16,7 @@ body{
 	left:0;
 	right:0;
 	z-index:5;
-	width:100vw;
-	color:#585858d6
+	width:100vw
 }
 .banner-container{
 	display:flex;
@@ -56,22 +55,26 @@ body{
 }
 .bitcoin{
 	position: relative;
-	color: #ff600078;
+	color: #ff600063;
 	font-size: 2.5rem;
+	font-weight:300
 }
 .sats {
 	position: relative;
-	color: #885414;
+	color: #885414bd;
 	font-size: 2.5rem;
+	font-weight:300
 }
 .btc-short, .sats-short {
-	color: #585858;
+	color: #585858d6;
+	font-weight: 100
 }
 .symbol{
 	font-size:12rem;
 	color:#1a1a1a;
 	height:14rem;
-	margin:2rem 0 0
+	margin:2rem 0 0;
+	font-weight:500
 }
 #currency-amount{
 	background-color:#1a1a1a;
@@ -79,31 +82,32 @@ body{
 	color:#0f0f0f;
 	width:95%;
 	height:6.25rem;
-	font-weight:600;
+	font-weight:500;
 	font-size:4.5rem;
 	border:0;
 	outline:0;
 	border-radius:.2em;
-	font-family:"JetBrains Mono"
+	font-family:'JetBrains Mono', monospace
 }
 #currency-select{
 	font-size:.93rem;
 	background:#1a1a1a;
 	border-radius:.5em;
 	color:#585858d6;
-	width:225px;
 	height:1.5625rem;
 	padding-left:1.25em;
 	border:0;
 	outline:0;
-	font-family:"JetBrains Mono"
+	font-family:'JetBrains Mono', monospace;
+	font-weight: 100
 }
 .monies{
 	width:100vw
 }
 .currency_select{
 	font-size:1rem;
-	color:#585858d6
+	color:#585858d6;
+	width:225px
 }
 .made{
 	font-size:.7rem;
@@ -111,8 +115,9 @@ body{
 }
 .bitko{
 	height:2.1rem;
-	rotate: 13.88deg
+	transform: rotate(13.88deg)
 }
 .btc-svg{
-	height:2.5rem
+	height:2.5rem;
+	transform: rotate(13.88deg)
 }
