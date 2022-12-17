@@ -19,7 +19,7 @@
 </head>
 <body>
   <div class="main">
-   <div id="banner">
+   <div id="banner" class="banner">
     <div class="banner-container"><div class=currency_select>
       <select id="currency-select">
 	      <option value="usd">US Dollar</option>
@@ -71,8 +71,8 @@
 <div class=symbol><span id="symbol"></span></div></div>
     <div class=monies>
     <div class=amount><input type="text" id="currency-amount"></div></div>
-    <div class=totals><div class=bitcoin><img class="btc-svg" src="assets/Bitcoin.svg">&nbsp;<span id="bitcoin-amount"></span><span id=btc>&nbsp;btc</span></div>
-    <div class=sats><img class="bitko" src="assets/Sat_semi_bold.svg">&nbsp;<span id="satoshi-amount"></span><span id="sats">&nbsp;sats</span></div></div></div>
+    <div class=totals><div class="bitcoin"><img class="btc-svg" src="assets/Bitcoin.svg">&nbsp;<span id="bitcoin-amount"></span><span id="btc" class="btc-short">&nbsp;btc</span></div>
+    <div class=sats><img class="bitko" src="assets/Sat_semi_bold.svg">&nbsp;<span id="satoshi-amount"></span><span id="sats" class="sats-short">&nbsp;sats</span></div></div></div>
 <script>
 document.getElementById('currency-amount').value = "";
 document.getElementById('currency-select').selectedIndex = 0;

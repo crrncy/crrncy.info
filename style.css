@@ -1,165 +1,142 @@
-a {
-	color: #585858d6;
-	font-family: 'JetBrains Mono';
+a,body,h1{
+	color:#585858d6;
+	font-family:"JetBrains Mono"
 }
-body {
-	background-color: #0f0f0f;
-	text-align: center;
-	color: #585858d6;
-	font-family: "JetBrains Mono";
-	font-size: 1rem;
-	margin: 0;
-  height: 100vh;
-	width: 100vw;
+body{
+	background-color:#0f0f0f;
+	text-align:center;
+	font-size:1rem;
+	margin:0;
+	height:100vh;
+	width:100vw
 }
-h1 {
-	color: #585858d6;
-	font-family: "JetBrains Mono";
+.main{
+	margin:auto;
+	align-items:center;
+	display:grid;
+	width:100vw
 }
-.main {
-	margin: auto auto;
-  align-items: center;
-  display: grid;
-	width: 100vw;
+.middle{
+	margin:5% 0 2% 0;
+	width:100vw
 }
-.middle {
-	padding: 5% 0% 2% 0%;
-	width: 100vw;
+.amount,.currency{
+	display:inline-block;
+	margin:1% 0
 }
-.currency {
-	display: inline-block;
-	padding: 1% 0% 1% 0%;
+.amount{
+	padding:1em 0
 }
-.amount {
-	display: inline-block;
-	padding: 1em 0em 1em 0em;
+.totals{
+	font-size:2.5rem;
+	color:#585858d6
 }
-.totals {
-	display: relative;
-	color: #585858d6;
-}
-.bitcoin {
+.bitcoin{
 	position: relative;
-}
-#btc {
-  color: #585858d6;
-	font-size:2.3rem;
+	color: #ff600078;
+	font-size: 2.5rem;
+	position:relative;
 }
 .sats {
 	position: relative;
-}
-#sats {
-  color: #585858d6;
-	font-size:2.3rem;
-}
-.symbol {
-	display: inline-block;
-  font-size: 12rem;
-	color: #1a1a1a;
-	height: 14rem;
-	padding: .25rem 0rem 0rem 0rem;
-	position: relative;
-}
-#symbol {
-  height: 100%;
-  display: inline-block;
-}
-.totals {
+	color: #885414;
 	font-size: 2.5rem;
+	position:relative;
 }
-#banner {
-	background-color: #0d0d0d;
-	color: #585858d6;
-	height: 3.4rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 5;
-	width:100vw;
+.btc-short, .sats-short {
+	color: #585858;
 }
-#banner .banner-container {
-	display: flex !important;
-	width: calc(100vw - 2em);
-	height: 3.4rem;
-	margin: 0 auto;
-	justify-content: space-between;
-	align-items: center;
+.symbol{
+	font-size:12rem;
+	color:#1a1a1a;
+	height:14rem;
+	margin:2rem 0 0;
+	position:relativedisplay:inline-block
 }
-#banner .heart {
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23D72626' stroke='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
-	background-size: cover;
-	background-position: center;
-	display: inline-block;
-	width: .875rem;
-	height: .875rem;
-	margin: 0 5px;
+.banner{
+	background-color:#0d0d0d;
+	color:#585858d6;
+	height:3.4rem;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:5;
+	width:100vw
 }
-.Info {
-	font-size: .8rem;
-	margin-bottom: 10%;
-	position: absolute;
-	bottom: 0rem;
+.banner-container{
+	display:flex!important;
+	width:calc(100vw - 4em);
+	height:3.4rem;
+	margin:0 auto;
+	justify-content:space-between;
+	align-items:center
 }
-#currency-amount {
-	background-color: #1a1a1a;
-	border: none;
-	outline: none;
-	text-align: center;
-	color: #0f0f0f;
-	width: 95%;
-	height: 6.25rem;
-	font-weight: 600;
-	font-size: 4.5rem;
-	font-family: "JetBrains Mono";
+.heart{
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23D72626' stroke='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+	background-size:cover;
+	background-position:center;
+	display:inline-block;
+	width:.875rem;
+	height:.875rem;
+	margin:0 5px
 }
-#currency-select {
-	font-size: .93rem;
-	background: #1a1a1a;
-	border: none;
-	border-radius: 10px;
-	color: #585858d6;
-	width: 225px;
-	height: 1.5625rem;
-	padding-left: 10px;
-	outline:none;
-	font-family: "JetBrains Mono";
+.Info{
+	font-size:.8rem;
+	margin-bottom:10%;
+	position:absolute;
+	bottom:0
 }
-.monies {
-  width: 100vw;
+#currency-amount{
+	background-color:#1a1a1a;
+	text-align:center;
+	color:#0f0f0f;
+	width:95%;
+	height:6.25rem;
+	font-weight:600;
+	font-size:4.5rem;
+	border:0;
+	outline:0;
+	font-family:"JetBrains Mono"
 }
-.currency_select {
-	font-size: 1rem;
-	color: #585858d6;
+#currency-select{
+	font-size:.93rem;
+	background:#1a1a1a;
+	border-radius:10px;
+	color:#585858d6;
+	width:225px;
+	height:1.5625rem;
+	padding-left:1.25em;
+	border:0;
+	outline:0;
+	font-family:"JetBrains Mono"
 }
-.made {
-	font-size: .7rem;
-	color: #585858d6;
+.monies{
+	width:100vw
 }
-#bitcoin-amount {
-	color: #ff600078;
-	font-size: 2.5rem;
+.currency_select,.made{
+	font-size:1rem;
+	color:#585858d6
 }
-#satoshi-amount {
-	color: #885414;;
-	font-size: 2.5rem;
+.made{
+	font-size:.7rem
 }
-.bitko {
-  height: 2.1rem;
+.bitko{
+	height:2.1rem
 }
-.btc-svg {
-  height: 2.5rem;
+.btc-svg{
+	height:2.5rem
 }
-input[type=text], input[type=number] {
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	border: .0625rem solid #0f0f0f;
-	color: #0f0f0f;
-	width: 250px;
-	height: 1.875rem;
-	font-family: "JetBrains Mono";
+input[type=number],input[type=text]{
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	border:.0625rem solid #0f0f0f;
+	color:#0f0f0f;
+	width:250px;
+	height:1.875rem;
+	font-family:"JetBrains Mono"
 }
-input[type=text]:focus {
-	outline: none;
+input[type=text]:focus{
+	outline:0
 }
