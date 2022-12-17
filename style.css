@@ -20,7 +20,7 @@ body{
 }
 .banner-container{
 	display:flex;
-	width:calc(100vw - 4em);
+	width:calc(100vw - 2.25em);
 	height:3.4rem;
 	margin:0 auto;
 	justify-content:space-between;
