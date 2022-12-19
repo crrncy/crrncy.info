@@ -3,7 +3,7 @@ A simple way to check the price of your local currency in bitcoin & Sats.
 
 - Website: [crrncy.info](https://https://crrncy.info/ "crrncy.info")
 - GH Profile: [@crrncy](https://github.com/crrncy)
-- Contact: [Email](mailto:crrncy@proton.me?Subject=Query%20about%20crrncy.info) | [Nostr](https://nostr.com/88d5701291e5e5264ded94bec840ca75f6488cb7bc343538cd251cb2bd9311db)
+- Contact: [Email](mailto:crrncy@proton.me?Subject=Query%20about%20crrncy.info) | Nostr PubKey: 94845bd84b47f90afd06fc1b86628c8910a3ca29cf434aec99efec7a57f47628
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
