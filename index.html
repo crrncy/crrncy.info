@@ -36,6 +36,7 @@
         <option value="bhd">Bharaini Dinar</option>
         <option value="brl">Brazil Real</option>
         <option value="gbp">British Pound</option>
+        <option value="mmk">Burmese Kyat</option>
         <option value="cad">Canadian Dollar</option>
         <option value="cny">Chinese Yuan</option>
 	      <option value="clp">Chilean Peso</option>
@@ -210,6 +211,8 @@ inputField.addEventListener("input", function() {
       		symbolField.innerHTML = "$";
       	} else if (selectField.value === "bdt") {
       		symbolField.innerHTML = "Tk";
+        } else if (selectField.value === "mmk") {
+          symbolField.innerHTML = "Ks";
       	} else if (selectField.value === "kwd") {
       		symbolField.innerHTML = "د.ك";
       	}

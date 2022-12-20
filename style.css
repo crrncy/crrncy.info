@@ -99,7 +99,8 @@ body{
 	border:0;
 	outline:0;
 	font-family:'JetBrains Mono', monospace;
-	font-weight: 100
+	font-weight: 100;
+	width:15em
 }
 .monies{
 	width:100vw
